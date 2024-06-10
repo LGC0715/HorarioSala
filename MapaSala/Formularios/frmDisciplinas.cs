@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,21 @@ namespace MapaSala.Formularios
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtidprofessor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bntcadastrardisciplina_Click(object sender, EventArgs e)
+        {
+            DisciplinasEntidade disc = new DisciplinasEntidade();
+            disc.Id = Convert.ToInt32(txtiddisciplinas.Text);
+            disc.NomeDisciplina = txtnomedisciplina.Text;
+            disc.Area = txtarea.Text;
+
+            dados.Add(curso);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.Entitidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,21 +13,20 @@ namespace MapaSala.Formularios
 {
     public partial class frmProfessores : Form
     {
+        BindingSource info;
         public frmProfessores()
         {
             InitializeComponent();
+            info = new BindingSource();
+            dtGridProfessores.DataSource = info;
         }
 
         private void dtGridCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
-        private void chkativo_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void txtturno_TextChanged(object sender, EventArgs e)
         {
 
@@ -69,10 +69,24 @@ namespace MapaSala.Formularios
 
         private void bntcadastrarcurso_Click(object sender, EventArgs e)
         {
-
+            ProfessoresEntidade prof = new ProfessoresEntidade();
+            prof.Id = Convert.ToInt32(numericidprof.Text);
+            prof.Nome = txtnomeprofessor.Text;
+            prof.Apelido = txtapelidoprof.Text;
+            info.Add(prof);
         }
 
         private void frmProfessores_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
         }
