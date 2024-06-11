@@ -40,12 +40,13 @@ namespace MapaSala.Formularios
             this.label5 = new System.Windows.Forms.Label();
             this.dtGridCursos = new System.Windows.Forms.DataGridView();
             this.chkativo = new System.Windows.Forms.CheckBox();
+            this.limparcursos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridCursos)).BeginInit();
             this.SuspendLayout();
             // 
             // bntcadastrarcurso
             // 
-            this.bntcadastrarcurso.Location = new System.Drawing.Point(640, 34);
+            this.bntcadastrarcurso.Location = new System.Drawing.Point(640, 14);
             this.bntcadastrarcurso.Name = "bntcadastrarcurso";
             this.bntcadastrarcurso.Size = new System.Drawing.Size(107, 33);
             this.bntcadastrarcurso.TabIndex = 0;
@@ -140,11 +141,22 @@ namespace MapaSala.Formularios
             this.chkativo.Text = "ATIVO";
             this.chkativo.UseVisualStyleBackColor = true;
             // 
+            // limparcursos
+            // 
+            this.limparcursos.Location = new System.Drawing.Point(651, 53);
+            this.limparcursos.Name = "limparcursos";
+            this.limparcursos.Size = new System.Drawing.Size(75, 23);
+            this.limparcursos.TabIndex = 12;
+            this.limparcursos.Text = "Limpar";
+            this.limparcursos.UseVisualStyleBackColor = true;
+            this.limparcursos.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // frmCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.limparcursos);
             this.Controls.Add(this.dtGridCursos);
             this.Controls.Add(this.chkativo);
             this.Controls.Add(this.txtturno);
@@ -176,5 +188,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dtGridCursos;
         private System.Windows.Forms.CheckBox chkativo;
+        private System.Windows.Forms.Button limparcursos;
     }
 }

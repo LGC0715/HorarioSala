@@ -41,6 +41,7 @@ namespace MapaSala.Formularios
             this.txtNumPc = new System.Windows.Forms.NumericUpDown();
             this.txtNumCadeira = new System.Windows.Forms.NumericUpDown();
             this.dtGridSalas = new System.Windows.Forms.DataGridView();
+            this.btnlimparsala = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumPc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumCadeira)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).BeginInit();
@@ -95,6 +96,7 @@ namespace MapaSala.Formularios
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(44, 20);
             this.txtId.TabIndex = 7;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // chkIsLab
             // 
@@ -118,7 +120,7 @@ namespace MapaSala.Formularios
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(610, 29);
+            this.btnSalvar.Location = new System.Drawing.Point(610, 14);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 10;
@@ -148,11 +150,22 @@ namespace MapaSala.Formularios
             this.dtGridSalas.Size = new System.Drawing.Size(673, 352);
             this.dtGridSalas.TabIndex = 13;
             // 
+            // btnlimparsala
+            // 
+            this.btnlimparsala.Location = new System.Drawing.Point(610, 43);
+            this.btnlimparsala.Name = "btnlimparsala";
+            this.btnlimparsala.Size = new System.Drawing.Size(75, 23);
+            this.btnlimparsala.TabIndex = 14;
+            this.btnlimparsala.Text = "Limpar";
+            this.btnlimparsala.UseVisualStyleBackColor = true;
+            this.btnlimparsala.Click += new System.EventHandler(this.btnlimparsala_Click);
+            // 
             // frmSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 450);
+            this.Controls.Add(this.btnlimparsala);
             this.Controls.Add(this.dtGridSalas);
             this.Controls.Add(this.txtNumCadeira);
             this.Controls.Add(this.txtNumPc);
@@ -191,5 +204,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.NumericUpDown txtNumPc;
         private System.Windows.Forms.NumericUpDown txtNumCadeira;
         private System.Windows.Forms.DataGridView dtGridSalas;
+        private System.Windows.Forms.Button btnlimparsala;
     }
 }

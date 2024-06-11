@@ -29,7 +29,7 @@ namespace MapaSala.Formularios
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             SalasEntidade sala = new SalasEntidade();
-            sala.Id= Convert.ToInt32(txtId.Text);
+            sala.Id = Convert.ToInt32(txtId.Text);
             sala.Nome = txtNome.Text;
             sala.IsLab = chkIsLab.Checked;
             sala.NumeroCadeiras = Convert.ToInt32(txtNumCadeira.Value);
@@ -37,6 +37,27 @@ namespace MapaSala.Formularios
             sala.Disponivel = chkDisponivel.Checked;
 
             dados.Add(sala);
+            LimparCampos();
+        }
+
+        private void btnlimparsala_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+
+        }
+        private void LimparCampos()
+        {
+            txtId.Text = "";
+            txtNome.Text = "";
+            chkIsLab.Checked = false;
+            txtNumCadeira.Text = "";
+            txtNumPc.Text = "";
+            chkDisponivel.Checked = false;
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,6 +13,8 @@ namespace MapaSala.Formularios
 {
     public partial class frmDisciplinas : Form
     {
+        DataTable dados;//**
+        int LinhaSelecionada;
         public frmDisciplinas()
         {
             InitializeComponent();
@@ -30,12 +32,17 @@ namespace MapaSala.Formularios
 
         private void bntcadastrardisciplina_Click(object sender, EventArgs e)
         {
-            DisciplinasEntidade disc = new DisciplinasEntidade();
-            disc.Id = Convert.ToInt32(txtiddisciplinas.Text);
-            disc.NomeDisciplina = txtnomedisciplina.Text;
-            disc.Area = txtarea.Text;
+           
+        }
 
-            dados.Add(curso);
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnexcluirdisc_Click(object sender, EventArgs e)
+        {
+            dtGridDisciplina.Rows.RemoveAt(LinhaSelecionada);
         }
     }
 }

@@ -28,10 +28,15 @@ namespace MapaSala.Formularios
             curso.NomeCurso = txtnomecurso.Text;
             curso.Turno = txtturno.Text;
             curso.Ativo = chkativo.Checked;
-
             dados.Add(curso);
         }
-
+        private void LimparCampos()
+        {
+            txtidcurso.Text = "";
+            txtnomecurso.Text = "";
+            txtturno.Text = "";
+            chkativo.Checked = false;
+        }
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -65,6 +70,11 @@ namespace MapaSala.Formularios
         private void txtidcurso_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            LimparCampos();
         }
     }
 }

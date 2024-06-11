@@ -39,20 +39,22 @@ namespace MapaSala.Formularios
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bntcadastrardisciplina = new System.Windows.Forms.Button();
+            this.btnlimpardisc = new System.Windows.Forms.Button();
+            this.btnexcluirdisc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridDisciplina)).BeginInit();
             this.SuspendLayout();
             // 
             // dtGridDisciplina
             // 
             this.dtGridDisciplina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGridDisciplina.Location = new System.Drawing.Point(41, 89);
+            this.dtGridDisciplina.Location = new System.Drawing.Point(41, 130);
             this.dtGridDisciplina.Name = "dtGridDisciplina";
-            this.dtGridDisciplina.Size = new System.Drawing.Size(695, 324);
+            this.dtGridDisciplina.Size = new System.Drawing.Size(695, 283);
             this.dtGridDisciplina.TabIndex = 22;
             // 
             // txtarea
             // 
-            this.txtarea.Location = new System.Drawing.Point(410, 46);
+            this.txtarea.Location = new System.Drawing.Point(466, 46);
             this.txtarea.Name = "txtarea";
             this.txtarea.Size = new System.Drawing.Size(100, 20);
             this.txtarea.TabIndex = 20;
@@ -60,7 +62,7 @@ namespace MapaSala.Formularios
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(407, 29);
+            this.label5.Location = new System.Drawing.Point(463, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 13);
             this.label5.TabIndex = 19;
@@ -68,7 +70,7 @@ namespace MapaSala.Formularios
             // 
             // txtnomedisciplina
             // 
-            this.txtnomedisciplina.Location = new System.Drawing.Point(223, 46);
+            this.txtnomedisciplina.Location = new System.Drawing.Point(274, 46);
             this.txtnomedisciplina.Name = "txtnomedisciplina";
             this.txtnomedisciplina.Size = new System.Drawing.Size(100, 20);
             this.txtnomedisciplina.TabIndex = 18;
@@ -76,7 +78,7 @@ namespace MapaSala.Formularios
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(220, 30);
+            this.label4.Location = new System.Drawing.Point(271, 30);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 13);
             this.label4.TabIndex = 17;
@@ -85,7 +87,7 @@ namespace MapaSala.Formularios
             // 
             // txtiddisciplinas
             // 
-            this.txtiddisciplinas.Location = new System.Drawing.Point(51, 46);
+            this.txtiddisciplinas.Location = new System.Drawing.Point(75, 46);
             this.txtiddisciplinas.Name = "txtiddisciplinas";
             this.txtiddisciplinas.Size = new System.Drawing.Size(100, 20);
             this.txtiddisciplinas.TabIndex = 16;
@@ -94,7 +96,7 @@ namespace MapaSala.Formularios
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 30);
+            this.label3.Location = new System.Drawing.Point(72, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(16, 13);
             this.label3.TabIndex = 15;
@@ -118,7 +120,7 @@ namespace MapaSala.Formularios
             // 
             // bntcadastrardisciplina
             // 
-            this.bntcadastrardisciplina.Location = new System.Drawing.Point(629, 33);
+            this.bntcadastrardisciplina.Location = new System.Drawing.Point(629, 19);
             this.bntcadastrardisciplina.Name = "bntcadastrardisciplina";
             this.bntcadastrardisciplina.Size = new System.Drawing.Size(107, 33);
             this.bntcadastrardisciplina.TabIndex = 12;
@@ -126,11 +128,33 @@ namespace MapaSala.Formularios
             this.bntcadastrardisciplina.UseVisualStyleBackColor = true;
             this.bntcadastrardisciplina.Click += new System.EventHandler(this.bntcadastrardisciplina_Click);
             // 
+            // btnlimpardisc
+            // 
+            this.btnlimpardisc.Location = new System.Drawing.Point(648, 60);
+            this.btnlimpardisc.Name = "btnlimpardisc";
+            this.btnlimpardisc.Size = new System.Drawing.Size(75, 23);
+            this.btnlimpardisc.TabIndex = 23;
+            this.btnlimpardisc.Text = "Limpar";
+            this.btnlimpardisc.UseVisualStyleBackColor = true;
+            this.btnlimpardisc.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnexcluirdisc
+            // 
+            this.btnexcluirdisc.Location = new System.Drawing.Point(648, 101);
+            this.btnexcluirdisc.Name = "btnexcluirdisc";
+            this.btnexcluirdisc.Size = new System.Drawing.Size(75, 23);
+            this.btnexcluirdisc.TabIndex = 24;
+            this.btnexcluirdisc.Text = "Excluir";
+            this.btnexcluirdisc.UseVisualStyleBackColor = true;
+            this.btnexcluirdisc.Click += new System.EventHandler(this.btnexcluirdisc_Click);
+            // 
             // frmDisciplinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnexcluirdisc);
+            this.Controls.Add(this.btnlimpardisc);
             this.Controls.Add(this.dtGridDisciplina);
             this.Controls.Add(this.txtarea);
             this.Controls.Add(this.label5);
@@ -161,5 +185,7 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bntcadastrardisciplina;
+        private System.Windows.Forms.Button btnlimpardisc;
+        private System.Windows.Forms.Button btnexcluirdisc;
     }
 }
