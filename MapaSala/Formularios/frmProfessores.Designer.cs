@@ -39,12 +39,14 @@ namespace MapaSala.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.bntcadastrarprof = new System.Windows.Forms.Button();
             this.numericidprof = new System.Windows.Forms.NumericUpDown();
+            this.btnlimparprof = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridProfessores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericidprof)).BeginInit();
             this.SuspendLayout();
             // 
             // dtGridProfessores
             // 
+            this.dtGridProfessores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGridProfessores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridProfessores.Location = new System.Drawing.Point(43, 91);
             this.dtGridProfessores.Name = "dtGridProfessores";
@@ -118,11 +120,11 @@ namespace MapaSala.Formularios
             // 
             // bntcadastrarprof
             // 
-            this.bntcadastrarprof.Location = new System.Drawing.Point(631, 31);
+            this.bntcadastrarprof.Location = new System.Drawing.Point(631, 18);
             this.bntcadastrarprof.Name = "bntcadastrarprof";
             this.bntcadastrarprof.Size = new System.Drawing.Size(107, 33);
             this.bntcadastrarprof.TabIndex = 12;
-            this.bntcadastrarprof.Text = "cadastrar professor";
+            this.bntcadastrarprof.Text = "Cadastrar professor";
             this.bntcadastrarprof.UseVisualStyleBackColor = true;
             this.bntcadastrarprof.Click += new System.EventHandler(this.bntcadastrarcurso_Click);
             // 
@@ -134,11 +136,22 @@ namespace MapaSala.Formularios
             this.numericidprof.TabIndex = 23;
             this.numericidprof.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
+            // btnlimparprof
+            // 
+            this.btnlimparprof.Location = new System.Drawing.Point(645, 57);
+            this.btnlimparprof.Name = "btnlimparprof";
+            this.btnlimparprof.Size = new System.Drawing.Size(75, 23);
+            this.btnlimparprof.TabIndex = 24;
+            this.btnlimparprof.Text = "Limpar";
+            this.btnlimparprof.UseVisualStyleBackColor = true;
+            this.btnlimparprof.Click += new System.EventHandler(this.btnlimparprof_Click);
+            // 
             // frmProfessores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnlimparprof);
             this.Controls.Add(this.numericidprof);
             this.Controls.Add(this.dtGridProfessores);
             this.Controls.Add(this.txtapelidoprof);
@@ -172,5 +185,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bntcadastrarprof;
         private System.Windows.Forms.NumericUpDown numericidprof;
+        private System.Windows.Forms.Button btnlimparprof;
     }
 }

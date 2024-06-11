@@ -11,6 +11,13 @@ namespace Model.Entitidades
         public int Id { get; set; }
         public string NomeDisciplinas { get; set; }
         public string Area { get; set; }
-        
+       
+
+        public object[] Linha()
+        {
+            return new object[] { Id, NomeDisciplinas, Area };
+            //preenche autonaticamente.
+
+        }
     }
 }

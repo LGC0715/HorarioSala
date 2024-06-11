@@ -80,14 +80,15 @@ namespace MapaSala.Formularios
         {
 
         }
-
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void btnlimparprof_Click(object sender, EventArgs e)
         {
+            txtnomeprofessor.Text = "";
+            txtapelidoprof.Text = "";
 
         }
     }
