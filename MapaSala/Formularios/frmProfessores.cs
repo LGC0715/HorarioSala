@@ -1,4 +1,5 @@
-﻿using Model.Entitidades;
+﻿using MapaSala.DAO;
+using Model.Entitidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -73,6 +74,9 @@ namespace MapaSala.Formularios
             prof.Id = Convert.ToInt32(numericidprof.Text);
             prof.Nome = txtnomeprofessor.Text;
             prof.Apelido = txtapelidoprof.Text;
+
+            ProfessorDAO dao = new ProfessorDAO();
+            dao.Inserir(prof);
             info.Add(prof);
         }
 
