@@ -14,12 +14,19 @@ namespace MapaSala.Formularios
 {
     public partial class frmProfessores : Form
     {
-        BindingSource info;
+        DataTable dados;
+        ProfessorDAO dao = new ProfessorDAO();
+
         public frmProfessores()
         {
             InitializeComponent();
-            info = new BindingSource();
-            dtGridProfessores.DataSource = info;
+            dados = new DataTable();
+            foreach(var atributos in typeof(ProfessoresEntidade).GetProperties())
+            {
+                dados.Columns.Add(atributos.Name);
+            }
+            dados = dao.ObterProfessores();
+            dtGridProfessores.DataSource = dados;
         }
 
         private void dtGridCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -77,7 +84,10 @@ namespace MapaSala.Formularios
 
             ProfessorDAO dao = new ProfessorDAO();
             dao.Inserir(prof);
-            info.Add(prof);
+
+            dtGridProfessores.DataSource = dao.ObterProfessores();
+
+            LimparCampos();
         }
 
         private void frmProfessores_Load(object sender, EventArgs e)

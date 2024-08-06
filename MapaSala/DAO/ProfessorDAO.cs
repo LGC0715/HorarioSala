@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using Model.Entitidades;
+using System.Data;
 
 namespace MapaSala.DAO
 {
@@ -29,6 +30,33 @@ namespace MapaSala.DAO
             comando.Parameters.Add(parametro2);
             comando.ExecuteNonQuery(); //nao retorna nd
             Conexao.Close();
+        }
+        public DataTable ObterProfessores()
+        {
+            DataTable dt =new DataTable();
+            Conexao.Open();
+            string query = "SELECT * FROM PROFESSORES ORDER BY Id desc";
+            SqlCommand Comando = new SqlCommand(query, Conexao);
+            
+
+            SqlDataReader Leitura = Comando.ExecuteReader();
+
+            foreach(var atributos in typeof(ProfessoresEntidade).GetProperties())//laço de reoetição para ler listas
+            {
+                dt.Columns.Add(atributos.Name);
+            }
+            if(Leitura.HasRows) //a linha existe? true or false
+            {
+                while (Leitura.Read())//para pegar mais de um registro, faz uma consulta
+                {
+                    ProfessoresEntidade prof = new ProfessoresEntidade();
+                    prof.Id = Convert.ToInt32(Leitura[0]);
+                    prof.Nome = Leitura[1].ToString();
+                    prof.Apelido = Leitura[2].ToString();
+                    dt.Rows.Add(prof.Linha());
+                }
+            }
+            return dt;
         }
     }
 }
